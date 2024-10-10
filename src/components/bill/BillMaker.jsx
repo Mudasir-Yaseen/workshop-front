@@ -262,7 +262,7 @@ const BillMaker = () => {
   
     try {
       const response = await axios.post("http://localhost:3002/bill/create", billData); // Corrected URL
-      if (response.status === 201) { // Check for 201 Created status
+      if (response.status === 201) { // Check for 202 Created status
         alert("Bill saved successfully!");
       }
     } catch (error) {
