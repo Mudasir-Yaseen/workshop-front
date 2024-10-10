@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
+import pdfMake from "pdfmake/build/pdfmake";
+
 import axios from "axios";
 
+
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 
 const BillMaker = () => {
   const [items, setItems] = useState([{ name: "", price: "", quantity: 1, size: "" }]);
