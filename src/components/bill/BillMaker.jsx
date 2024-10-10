@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import pdfFonts from "pdfmake/build/vfs_fonts";
 import pdfMake from "pdfmake/build/pdfmake";
-
+// Use named import for vfs_fonts
+import * as pdfFonts from "pdfmake/build/vfs_fonts";
 import axios from "axios";
 
-
+// Assign vfs (virtual file system) fonts to pdfMake
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+
 
 
 const BillMaker = () => {
